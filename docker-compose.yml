@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  qbitmf:
+    build: images/qbitmf
+    container_name: qbitmf
+    privileged: true
+    ports:
+      - 8080:8080
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Toronto #set correct timezont
+    volumes:
+      - ./interfaces:/interfaces:ro
+      - ./config:/config
+      - ./downloads:/downloads
+    restart: unless-stopped
