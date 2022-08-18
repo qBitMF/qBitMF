@@ -15,7 +15,7 @@ For qBitMF to work you'll need to provide your own wireguard configuration files
 <br />
 If not here are guides for getting configs from various VPN providers.
 
-### [Getting configs from your VPN provider](/doc/getting-configfiles)
+### [Getting configs from your VPN provider](/doc/get-configfiles)
 
 > **Note**
 > To start out, I'd recommend making 2 or 3 config files.
