@@ -36,6 +36,8 @@ def process_config(hop_id, iface, config_file):
         "AllowedIPs": conf["Peer"]["AllowedIPs"],
         "Endpoint": conf["Peer"]["Endpoint"],
     }
+    if conf["Peer"].get("PresharedKey", False):
+        out_conf["Peer"]["PresharedKey"] = conf["Peer"]["PresharedKey"]
 
     with open(f"/interface-state/{iface}.conf", "w") as out_conf_file:
         out_conf.write(out_conf_file)
