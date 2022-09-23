@@ -16,8 +16,6 @@ chown abc:abc /downloads
 rm -rf /interface-state
 mkdir -p /interface-state
 
-python3 /make-wg-netns.py
-
 # Set DNS to Cloudflare
 # By default, docker tries to handle DNS so it can resolve internal hostnames,
 # So we need to override it at runtime, rather than through the Dockerfile.
@@ -26,6 +24,8 @@ python3 /make-wg-netns.py
 # might end up being interface-specific. We need a DNS server that can be
 # contacted through any interface.
 cp /resolv.conf.default /etc/resolv.conf
+
+python3 /make-wg-netns.py
 
 # Run qBittorrent as an unprivileged netns'd user
 ip netns exec wg su -m abc -c /start-unpriv.sh
