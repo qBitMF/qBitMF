@@ -17,4 +17,4 @@ To generate more configs, again enter your Location and Port, but select the exi
 
 ![example of how to generate windscribe config](/doc/img/windscribe-guide-2.png)
 
-Now head back to [the README](../..#configuring-docker-and-docker-compose) to continue setup.
+Now head back to [the README](../../README.md#configuring-docker-and-docker-compose) to continue setup.
